@@ -66,6 +66,7 @@ type GrafanaDeployment struct {
 	Affinity                      *v1.Affinity           `json:"affinity,omitempty"`
 	SecurityContext               *v1.PodSecurityContext `json:"securityContext,omitempty"`
 	TerminationGracePeriodSeconds int64                  `json:"terminationGracePeriodSeconds"`
+	EnvFrom                       []v1.EnvFromSource     `json:"envFrom,omitempty"`
 }
 
 // GrafanaIngress provides a means to configure the ingress created

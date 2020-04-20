@@ -350,6 +350,7 @@ func getContainers(cr *v1alpha1.Grafana, configHash, dsHash string) []v13.Contai
 				},
 			},
 		},
+		EnvFrom:                  cr.Spec.Deployment.EnvFrom,
 		Resources:                getResources(cr),
 		VolumeMounts:             getVolumeMounts(cr),
 		LivenessProbe:            getProbe(cr, 60, 30, 10),
