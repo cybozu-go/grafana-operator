@@ -2,6 +2,7 @@ package model
 
 import (
 	"fmt"
+
 	"github.com/integr8ly/grafana-operator/v3/pkg/apis/integreatly/v1alpha1"
 	"github.com/integr8ly/grafana-operator/v3/pkg/controller/config"
 	v1 "k8s.io/api/apps/v1"
@@ -340,6 +341,7 @@ func getContainers(cr *v1alpha1.Grafana, configHash, dsHash string) []v13.Contai
 				},
 			},
 		},
+		EnvFrom:                  cr.Spec.Deployment.EnvFrom,
 		Resources:                getResources(cr),
 		VolumeMounts:             getVolumeMounts(cr),
 		LivenessProbe:            getProbe(cr, 60, 30, 10),
