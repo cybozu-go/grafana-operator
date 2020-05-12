@@ -9,7 +9,7 @@ require (
 	github.com/go-openapi/spec v0.19.4
 	github.com/openshift/api v3.9.1-0.20190924102528-32369d4db2ad+incompatible
 	github.com/operator-framework/operator-sdk v0.16.0
-	github.com/pkg/errors v0.8.1
+	github.com/pkg/errors v0.9.1
 	github.com/prometheus/procfs v0.0.7 // indirect
 	golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898 // indirect
 	k8s.io/api v0.0.0
